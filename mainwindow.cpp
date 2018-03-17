@@ -46,7 +46,7 @@ void MainWindow::setupGrid(){
             b->setFont(font);
             ui->mineField->addWidget(b,i,j);
             //event binding
-            mouseLeftMapper->setMapping(b,(i*1000)+j);
+            mouseLeftMapper->setMapping(b,(i*1000)+j);//function member is setmapping (sender,id)
             mouseRightMapper->setMapping(b,(i*1000)+j);
             connect(b,SIGNAL(clicked()),mouseLeftMapper,SLOT(map()));
             connect(b,SIGNAL(rightClicked()),mouseRightMapper,SLOT(map()));
